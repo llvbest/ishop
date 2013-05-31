@@ -1,9 +1,6 @@
 <?php
-
 use Behat\MinkExtension\Context\MinkContext;
 use Behat\MinkExtension\Context\RawMinkContext;
-
-
 /**
  * You should uncomment following lines  when your Yii instance really will be in
  * `/common/lib/yii` directory.
