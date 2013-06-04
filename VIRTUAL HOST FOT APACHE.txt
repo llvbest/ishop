@@ -1,0 +1,28 @@
+#YiiBoilerplate !
+#FRONTEND :
+<VirtualHost 127.0.0.1:80>
+    DocumentRoot "*/ishop/frontend/www"
+    ServerName ishop.com
+    ServerAlias www.ishop.com
+</VirtualHost>
+
+<VirtualHost 127.0.0.1:443>
+    SSLEngine on
+    DocumentRoot "*/ishop/frontend/www"
+    ServerName ishop.com
+    ServerAlias www.ishop.com
+</VirtualHost>
+
+#BACKEND :
+<VirtualHost 127.0.0.1:80>
+    DocumentRoot "*/ishop/backend/www"
+    ServerName admin.ishop.com
+    ServerAlias www.admin.ishop.com
+</VirtualHost>
+
+<VirtualHost 127.0.0.1:443>
+    SSLEngine on
+    DocumentRoot "*/ishop/backend/www"
+    ServerName admin.ishop.com
+    ServerAlias www.admin.ishop.com
+</VirtualHost>
