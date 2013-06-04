@@ -34,11 +34,13 @@ return CMap::mergeArray(
 		'params' => $params,
 		// preload components required before running applications
 		// @see http://www.yiiframework.com/doc/api/1.1/CModule#preload-detail
-		'preload' => array('log'),
+		'preload' => array(
+            'log','bootstrap'
+        ),
 		// @see http://www.yiiframework.com/doc/api/1.1/CApplication#language-detail
 		'language' => 'en',
 		// uncomment if a theme is used
-		/*'theme' => '',*/
+		'theme' => 'def',
 		// setup import paths aliases
 		// @see http://www.yiiframework.com/doc/api/1.1/YiiBase#import-detail
 		'import' => array(
@@ -54,10 +56,28 @@ return CMap::mergeArray(
 			'application.controllers.*',
 			'application.models.*'
 		),
+        // YiiBooster includes all the features from its parent
+        // project Yii-Bootstrap, thus its gii templates
+	    'modules'=>array(
+            'gii'=>array(
+    			'class'=>'system.gii.giiModule',
+    			'password'=>'admin',
+                // If removed, Gii defaults to localhost only. Edit carefully to taste.
+                'ipFilters'=>array('127.0.0.1','::1'),
+                'generatorPaths' => array(
+                    'bootstrap.gii'
+                ),
+            ),
+    	),
 		/* uncomment and set if required */
 		// @see http://www.yiiframework.com/doc/api/1.1/CModule#setModules-detail
 		/* 'modules' => array(), */
 		'components' => array(
+			/* load bootstrap components */
+			'bootstrap' => array(
+				'class' => 'common.extensions.bootstrap.components.Bootstrap',
+				'responsiveCss' => true,
+			),
 			'errorHandler' => array(
 				// @see http://www.yiiframework.com/doc/api/1.1/CErrorHandler#errorAction-detail
 				'errorAction'=>'site/error'
