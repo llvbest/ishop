@@ -557,3 +557,4 @@ RewriteRule . index.php
 php_value upload_max_filesize 60M
 php_value post_max_size 60M
 </IfModule>
+
