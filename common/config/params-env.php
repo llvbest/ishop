@@ -20,4 +20,9 @@
  *
  * @see runpostdeploy
  */
-return array();
+return array(
+    'db.name' => 'ishop',
+	'db.connectionString' => 'mysql:host=localhost;dbname=ishop',
+    'db.username' => 'root',
+    'db.password' => '',
+);

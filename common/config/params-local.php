@@ -25,6 +25,10 @@
 return array(
 	'env.code' => 'private',
 	// DB connection configurations
+    'db.name' => 'ishop',
+	'db.connectionString' => 'mysql:host=localhost;dbname=ishop',
+    'db.username' => 'root',
+    'db.password' => '',
 //	'db.name' => '',
 //	'db.connectionString' => 'mysql:host={DATABASE-HOST};dbname={DATABASE-NAME}',
 //	'db.username' => '{DATABASE-USERNAME}',
